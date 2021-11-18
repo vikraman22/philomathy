@@ -20,4 +20,5 @@
     <string name="image_preview">Image preview</string>
     <string name="upload">Upload</string>
     <string name="select_to_upload_images">Select to Upload Images</string>
+    <string name="enter_text">Enter text</string>
 </resources>
