@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">philomathy</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="log_in">Log In</string>
+    <string name="not_a_user"> Don\'t have an account?</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="user_name">User Name</string>
+    <string name="description">Description</string>
+    <string name="text">Post</string>
+    <string name="image_preview">Image preview</string>
+    <string name="upload">Upload</string>
+    <string name="select_to_upload_images">Select to Upload Images</string>
+</resources>
