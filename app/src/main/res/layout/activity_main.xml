@@ -18,12 +18,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent" />
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="144dp"
-        android:layout_height="101dp"
-        app:srcCompat="@android:drawable/ic_menu_gallery"
-        tools:layout_editor_absoluteX="101dp"
-        tools:layout_editor_absoluteY="448dp" />
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

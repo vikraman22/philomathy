@@ -30,13 +30,16 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
 
-        loginbutton = findViewById(R.id.signupButton)
+
         signupbutton = findViewById(R.id.signupbutton)
         emailInput = findViewById(R.id.textUsernameLayout)
         passwordInput = findViewById(R.id.textPasswordInput)
-        loginbutton.setOnClickListener { onLoginClicked() }
+        loginbutton = findViewById(R.id.loginButton)
+
 
         auth = Firebase.auth
+
+        loginbutton.setOnClickListener { onLoginClicked() }
 
         signupbutton.setOnClickListener {
             val intent = Intent(this, UploadActivity::class.java)
@@ -98,6 +101,7 @@ class LoginActivity : AppCompatActivity() {
                         Toast.LENGTH_SHORT
                     ).show()
                     val intent = Intent(this, MainActivity::class.java)
+                    intent.putExtra("getUser", auth.currentUser)
                     startActivity(intent)
                     finish()
                 } else {

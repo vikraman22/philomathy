@@ -26,12 +26,13 @@ class SignUp : AppCompatActivity() {
     private lateinit var auth: FirebaseAuth
 
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sign_up)
 
 
-        signupbutton = findViewById(R.id.signupButton)
+        signupbutton = findViewById(R.id.loginButton)
         emailInput = findViewById(R.id.textUsernameLayout)
         passwordInput = findViewById(R.id.textPasswordInput)
         usernameInput = findViewById(R.id.textUsername1Layout)
@@ -102,6 +103,7 @@ class SignUp : AppCompatActivity() {
 
                     val user = auth.currentUser
 
+                    Toast.makeText(baseContext, "$user?.email", Toast.LENGTH_SHORT).show()
                     val intent = Intent(this, MainActivity::class.java)
                     startActivity(intent)
 

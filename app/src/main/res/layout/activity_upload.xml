@@ -11,44 +11,49 @@
 
 
     <Button
-        android:id="@+id/upload_button"
+        android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="92dp"
-        android:gravity="center_horizontal"
-        android:orientation="horizontal"
-        android:text="@string/upload"
-        app:icon="@android:drawable/ic_menu_upload"
-        app:iconGravity="start"
+        android:text="@string/post"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.904"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/content_input" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.964" />
+
+    <ImageButton
+        android:id="@+id/upload_button"
+        android:layout_width="72dp"
+        android:layout_height="49dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.127"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/content_input"
+        app:layout_constraintVertical_bias="0.933"
+        app:srcCompat="@android:drawable/ic_menu_gallery" />
 
     <ImageView
         android:id="@+id/uploaded_view"
-        android:layout_width="223dp"
-        android:layout_height="138dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="32dp"
+        android:layout_width="357dp"
+        android:layout_height="246dp"
 
-        android:layout_marginEnd="32dp"
-        android:layout_marginBottom="731dp"
         android:contentDescription="@string/image_preview"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/upload_button"
-        app:layout_constraintVertical_bias="0.313"
-        app:srcCompat="@android:drawable/ic_menu_gallery">
+        app:layout_constraintTop_toBottomOf="@+id/content_input"
+        app:layout_constraintVertical_bias="0.256"
+
+        >
 
     </ImageView>
 
     <TextView
         android:id="@+id/postdescript"
-        android:layout_width="wrap_content"
-        android:layout_height="20dp"
+        android:layout_width="76dp"
+        android:layout_height="22dp"
         android:layout_marginStart="32dp"
         android:layout_marginEnd="22dp"
 
@@ -61,42 +66,28 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.938" />
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:layout_marginBottom="32dp"
-        android:text="@string/select_to_upload_images"
-        app:layout_constraintBottom_toTopOf="@+id/upload_button"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/content_input"
-        app:layout_constraintVertical_bias="0.0" />
-
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/content_input"
-        android:layout_width="0dp"
-        android:layout_height="180dp"
+        android:layout_width="350dp"
+        android:layout_height="189dp"
         android:layout_marginStart="32dp"
+        android:layout_marginTop="136dp"
         android:layout_marginEnd="32dp"
         app:counterEnabled="true"
         app:counterMaxLength="120"
         app:counterTextColor="@color/black"
         app:endIconMode="none"
-        app:layout_constraintBottom_toTopOf="@id/upload_button"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+
+        app:layout_constraintHorizontal_bias="0.666"
 
         app:layout_constraintStart_toStartOf="parent"
-
         app:layout_constraintTop_toTopOf="parent"
         app:passwordToggleEnabled="false">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="163dp"
             android:layout_weight="2"
             android:hint="@string/enter_text"
             android:textColorHint="#757575"

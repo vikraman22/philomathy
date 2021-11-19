@@ -53,5 +53,9 @@ dependencies {
     implementation 'com.google.firebase:firebase-analytics-ktx'
     implementation 'com.google.firebase:firebase-auth-ktx'
     implementation 'com.google.firebase:firebase-firestore-ktx'
+    implementation 'pub.devrel:easypermissions:3.0.0'
+
+// For developers using the Android Support Library
+    implementation 'pub.devrel:easypermissions:2.0.1'
 
 }
