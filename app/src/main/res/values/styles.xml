@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="appui" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+
+        <item name="colorPrimary">#56BEFF </item>
+        <item name="colorSecondary">#42B2E4</item>
+        <item name="colorPrimaryDark">#56BEFF </item>
+        <item name="colorButtonNormal" > #58BEFE </item>
+
+    </style>
+</resources>

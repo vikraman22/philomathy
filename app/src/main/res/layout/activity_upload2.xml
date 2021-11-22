@@ -2,19 +2,15 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".UploadActivity"
-
-    >
+    tools:context=".UploadActivity2">
 
 
     <Button
-        android:id="@+id/postbutton"
-        style="@style/appui"
-        android:layout_width="99dp"
-        android:layout_height="48dp"
+        android:id="@+id/uploadimageBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:text="@string/post"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -24,7 +20,7 @@
         app:layout_constraintVertical_bias="0.964" />
 
     <ImageButton
-        android:id="@+id/upload_button"
+        android:id="@+id/selectimageBtn"
         android:layout_width="72dp"
         android:layout_height="49dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -34,21 +30,20 @@
         app:layout_constraintTop_toBottomOf="@+id/content_input"
         app:layout_constraintVertical_bias="0.933"
         app:srcCompat="@android:drawable/ic_menu_gallery"
-        android:contentDescription="@string/upload_image" />
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <ImageView
-        android:id="@+id/uploaded_view"
+        android:id="@+id/firebaseImage"
         android:layout_width="357dp"
         android:layout_height="246dp"
-
         android:contentDescription="@string/image_preview"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.592"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/content_input"
+        app:layout_constraintVertical_bias="0.256"
 
-        app:layout_constraintVertical_bias="0.416">
+        >
 
     </ImageView>
 
@@ -66,14 +61,14 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.377" />
+        app:layout_constraintVertical_bias="0.938" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/content_input"
         android:layout_width="350dp"
         android:layout_height="189dp"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="135dp"
+        android:layout_marginTop="136dp"
         android:layout_marginEnd="32dp"
         app:counterEnabled="true"
         app:counterMaxLength="120"
@@ -96,44 +91,6 @@
             android:textSize="20sp"
             tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck,SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
     </com.google.android.material.textfield.TextInputLayout>
-
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textTitle"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginBottom="5dp"
-        android:hint="@string/Title"
-        app:layout_constraintBottom_toTopOf="@+id/content_input"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/postdescript">
-
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/passwordInput"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-
-            android:inputType="text" />
-
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <ProgressBar
-        android:id="@+id/ProgressDialog"
-        android:layout_width="112dp"
-        android:layout_height="127dp"
-        android:layout_marginBottom="300dp"
-        android:visibility="invisible"
-        app:layout_constraintBottom_toBottomOf="@+id/upload_button"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

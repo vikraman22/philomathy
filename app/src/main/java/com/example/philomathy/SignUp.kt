@@ -73,6 +73,10 @@ class SignUp : AppCompatActivity() {
                 emailInput.error = "Email must not be empty"
             }
 
+            password.length < 6 -> {
+                passwordInput.error = "Minimum of 6 Characters"
+            }
+
             else -> {
                 performSignup()
             }

@@ -16,6 +16,8 @@ import com.google.firebase.ktx.Firebase
 import android.text.Editable
 
 import android.text.TextWatcher
+import android.widget.ProgressBar
+import androidx.core.view.isVisible
 
 
 class LoginActivity : AppCompatActivity() {
@@ -25,10 +27,18 @@ class LoginActivity : AppCompatActivity() {
     private lateinit var auth: FirebaseAuth
     private lateinit var emailInput: TextInputLayout
     private lateinit var passwordInput: TextInputLayout
+    private lateinit var progressBar : ProgressBar
 
-    override fun onCreate(savedInstanceState: Bundle?) {
+    override fun onCreate(savedInstanceState: Bundle?)
+    {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
+
+        auth = Firebase.auth
+//        if(auth.currentUser != null)
+//        {
+//            startActivity(Intent(this, PostsActivity::class.java))
+//        }
 
 
         signupbutton = findViewById(R.id.signupbutton)
@@ -82,7 +92,13 @@ class LoginActivity : AppCompatActivity() {
         val password =
             findViewById<TextInputLayout>(R.id.textPasswordInput).editText?.text.toString()
 
+        progressBar = findViewById(R.id.progressBar)
+        emailInput.isEnabled = false
+        passwordInput.isEnabled = false
+        loginbutton.isVisible = false
+        progressBar.isVisible = true
         login(email, password)
+
 
     }
 
@@ -95,16 +111,18 @@ class LoginActivity : AppCompatActivity() {
                 if (task.isSuccessful) {
                     // Sign in success, update UI with the signed-in user's information
                     Log.d(TAG, "signInWithEmail:success")
-                    val user = auth.currentUser
+                   // val user = auth.currentUser
                     Toast.makeText(
                         baseContext, "Authentication Success.",
                         Toast.LENGTH_SHORT
                     ).show()
-                    val intent = Intent(this, MainActivity::class.java)
+                    val intent = Intent(this, UploadActivity::class.java)
                     intent.putExtra("getUser", auth.currentUser)
                     startActivity(intent)
                     finish()
-                } else {
+                }
+
+                else {
                     // If sign in fails, display a message to the user.
                     Log.w(TAG, "signInWithEmail:failure", task.exception)
                     showErrorDialog()
@@ -119,6 +137,12 @@ class LoginActivity : AppCompatActivity() {
             .setMessage("Username or password is not correct. Please try again.")
             .setPositiveButton("OK") { dialog, which -> dialog.dismiss() }
             .show()
+
+        emailInput.isEnabled = true
+        passwordInput.isEnabled = true
+        loginbutton.isVisible = true
+
+
     }
 
 
