@@ -14,9 +14,7 @@
             android:exported="true"
             android:label="@string/title_activity_profile"
             android:theme="@style/Theme.Philomathy.NoActionBar" />
-        <activity
-            android:name=".PostsActivity"
-            android:exported="true" />
+
         <activity
             android:name=".UploadActivity2"
             android:exported="true" />
@@ -30,7 +28,7 @@
             android:name=".MainActivity"
             android:exported="true" />
         <activity
-            android:name=".LoginActivity"
+            android:name=".PostsActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

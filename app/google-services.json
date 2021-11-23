@@ -1,33 +1,33 @@
 {
   "project_info": {
-    "project_number": "866783554378",
-    "project_id": "philomathy-f4438",
-    "storage_bucket": "philomathy-f4438.appspot.com"
+    "project_number": "909324869043",
+    "project_id": "philomathy-5b3b8",
+    "storage_bucket": "philomathy-5b3b8.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:866783554378:android:ab2015874d1146ce04efb3",
+        "mobilesdk_app_id": "1:909324869043:android:a8b84b3ee96cda2a34ffc6",
         "android_client_info": {
           "package_name": "com.example.philomathy"
         }
       },
       "oauth_client": [
         {
-          "client_id": "866783554378-rstt2hjdo8o3hmtp1eu29ftr43sn63sr.apps.googleusercontent.com",
+          "client_id": "909324869043-fj1ffmdn53595ofrieqi7be6me94cfs0.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyAikYC30wEk4GREvwVwrhOxcCiPHHJZh-A"
+          "current_key": "AIzaSyBdmRa8FQwCSTInNRrZRApTEbxou9o54M4"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "866783554378-rstt2hjdo8o3hmtp1eu29ftr43sn63sr.apps.googleusercontent.com",
+              "client_id": "909324869043-fj1ffmdn53595ofrieqi7be6me94cfs0.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
